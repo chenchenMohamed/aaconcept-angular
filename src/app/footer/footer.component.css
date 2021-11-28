@@ -1,0 +1,39 @@
+.w3l-footer-29-main p{
+    color: white;
+}
+
+.w3l-footer-29-main a{
+    color: white;
+    margin-left: 5px;
+}
+
+
+
+.w3l-footer-29-main h4{
+    color: white;
+}
+
+.w3l-footer-29-main ul{
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    padding-left: 0px !important;
+}
+
+.w3l-footer-29-main li{
+    float:left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.w3l-footer-29-main ul a{
+    width: 100%;
+    color: #C2C5DB;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: underline transparent;
+}
+
+h6{
+    color: #C2C5DB;   
+}

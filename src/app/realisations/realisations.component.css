@@ -1,0 +1,11 @@
+.slider1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner1.jpg) center no-repeat;
+  }
+
+  h5{
+    font-size: 85px;
+    line-height: 90px;
+    font-weight: 700;
+    margin-top: 50px;
+    color: white;
+  }
