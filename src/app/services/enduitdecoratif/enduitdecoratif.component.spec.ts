@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormulaireDevisComponent } from './formulaire-devis.component';
+import { EnduitdecoratifComponent } from './enduitdecoratif.component';
 
-describe('FormulaireDevisComponent', () => {
-  let component: FormulaireDevisComponent;
-  let fixture: ComponentFixture<FormulaireDevisComponent>;
+describe('EnduitdecoratifComponent', () => {
+  let component: EnduitdecoratifComponent;
+  let fixture: ComponentFixture<EnduitdecoratifComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormulaireDevisComponent ]
+      declarations: [ EnduitdecoratifComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormulaireDevisComponent);
+    fixture = TestBed.createComponent(EnduitdecoratifComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

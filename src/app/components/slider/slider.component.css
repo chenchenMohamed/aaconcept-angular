@@ -87,6 +87,14 @@ h5{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner3.jpg) center no-repeat;
 }
 
+.slider4{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner4.jpg) center no-repeat;
+}
+
+.slider5{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/renovation_de_facade/243140707_400781178296405_5815398119265706037_n.jpg) center no-repeat;
+}
+
 
 p{
   font-size: 18px;

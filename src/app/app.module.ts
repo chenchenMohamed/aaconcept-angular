@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SliderComponent } from './slider/slider.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AbouteHomeComponent } from './home/components/aboute-home/aboute-home.component';
 import { Blog1HomeComponent } from './home/components/blog1-home/blog1-home.component';
@@ -20,7 +20,11 @@ import { DemandedevisComponent } from './demandedevis/demandedevis.component';
 import { ContactComponent } from './contact/contact.component';
 import { RealisationsComponent } from './realisations/realisations.component';
 import { PartenaireComponent } from './home/components/partenaire/partenaire.component';
-import { FormulaireDevisComponent } from './formulaire-devis/formulaire-devis.component';
+import { SliderpageComponent } from './components/sliderpage/sliderpage.component';
+import { EnduitdecoratifComponent } from './services/enduitdecoratif/enduitdecoratif.component';
+import { NettoyagetoitureComponent } from './services/nettoyagetoiture/nettoyagetoiture.component';
+import { RenovationfacadeComponent } from './services/renovationfacade/renovationfacade.component';
+import { RenovationinterieurComponent } from './services/renovationinterieur/renovationinterieur.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,11 @@ import { FormulaireDevisComponent } from './formulaire-devis/formulaire-devis.co
     ContactComponent,
     RealisationsComponent,
     PartenaireComponent,
-    FormulaireDevisComponent
+    SliderpageComponent,
+    EnduitdecoratifComponent,
+    NettoyagetoitureComponent,
+    RenovationfacadeComponent,
+    RenovationinterieurComponent
   ],
   imports: [
     BrowserModule,

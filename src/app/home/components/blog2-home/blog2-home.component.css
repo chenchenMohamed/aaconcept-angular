@@ -27,6 +27,7 @@ p{
 
 .img-fluid{
     max-height: 200px;
+    transition: transform 1s;
 }
 
 .galler-top{
@@ -35,6 +36,7 @@ p{
 
 figure{
     position: relative;
+    overflow: hidden;
 }
 
 .style-animation-image{
@@ -42,27 +44,29 @@ figure{
     position: absolute;
     left:0px; 
     top:0px;
-    width: 0%; 
-    height: 0%;
-    background-color: rgba(0, 0, 0, 0.356); 
-   
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-}
-
-figure:hover .style-animation-image{
-    visibility: visible;
-    opacity: 1;   
-    width: 100%; 
+    width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.356); 
     display: flex;
     justify-content: center;
     align-items: center;
+   
+    visibility: visible;
+    opacity: 1; 
+    transition: visibility 0s, opacity 1s linear;
+}
+
+figure:hover .style-animation-image{
+    visibility: hidden;
+    opacity: 0;
 }
 
 .style-animation-text{
     font-weight: 700;
     font-size: 2.5vw;   
     color: white;
+}
+
+figure:hover .img-fluid{
+    transform: scale(1.5);
 }
