@@ -18,28 +18,28 @@
                   <div class="form-group required">
                     <label for="input-name" class=" control-label">Nom + Prénom</label>
                     <div class="">
-                      <input type="text" class="form-control"  id="input-name" value="" name="name">
+                      <input type="text" class="form-control"  id="input-name" value="" name="name" [(ngModel)]="request.name">
                     </div>
                   </div>
                   <br>
                   <div class="form-group required">
                     <label for="input-name" class=" control-label">Adresse</label>
                     <div class="">
-                      <input type="text" class="form-control"  id="input-name" value="" name="name">
+                      <input type="text" class="form-control"  id="input-name" value="" name="name" [(ngModel)]="request.adresse">
                     </div>
                   </div>
                   <br>
                   <div class="form-group required">
                     <label for="input-name" class=" control-label">Code postal</label>
                     <div class="">
-                      <input type="text" class="form-control"  id="input-name" value="" name="name">
+                      <input type="text" class="form-control"  id="input-name" value="" name="name" [(ngModel)]="request.codePostal">
                     </div>
                   </div>
                   <br>
                   <div class="form-group required">
                     <label for="input-name" class=" control-label">Ville</label>
                     <div class="">
-                      <input type="text" class="form-control"  id="input-name" value="" name="name">
+                      <input type="text" class="form-control"  id="input-name" value="" name="name" [(ngModel)]="request.ville">
                     </div>
                   </div>
                   
@@ -47,14 +47,17 @@
                   <div class="form-group required">
                     <label for="input-email" class="control-label">E-Mail </label>
                     <div class="">
-                      <input type="email" class="form-control"  id="input-email" value="" name="email">
+                      <input type="email" class="form-control"  id="email" value="" name="email" [(ngModel)]="request.email">
+                      <p *ngIf="erreurRequest.email != ''" style="color:red; font-size: 12px;">{{erreurRequest.email}}</p>
+     
                     </div>
                   </div>
                   <br>
                   <div class="form-group required">
                     <label for="input-enquiry" class="control-label">Téléphone</label>
                     <div class="">
-                      <input type="text" class="form-control"  id="input-name" value="" name="name">
+                      <input type="text" class="form-control"  id="telephone" value="" name="name" [(ngModel)]="request.telephone">
+                      <p *ngIf="erreurRequest.telephone != ''" style="color:red;font-size: 12px;">{{erreurRequest.telephone}}</p>
                 
                     </div>
                   </div>
@@ -64,91 +67,91 @@
                 <div class="col-sm-6">
                   <h4>Votre projet concerne :</h4>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <input name="Nettoyage & Hydrofuge de toiture et façade" class="form-check-input" type="checkbox" value="" id="defaultCheck1" (click)="clickProjets($event)">
                     <label class="form-check-label" for="defaultCheck1">
                       Nettoyage & Hydrofuge de toiture et façade
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="Sanitaire" class="form-check-input" type="checkbox" value="" id="defaultCheck2" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck2">
                       Sanitaire
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="placo-platre" class="form-check-input" type="checkbox" value="" id="defaultCheck3" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck3">
                       placo-platre
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="isolation" class="form-check-input" type="checkbox" value="" id="defaultCheck4" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck4">
                       isolation
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="Rénovation totale" class="form-check-input" type="checkbox" value="" id="defaultCheck5" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck5">
                       Rénovation totale
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="cloisons sèches" class="form-check-input" type="checkbox" value="" id="defaultCheck6" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck6">
                       cloisons sèches
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="revêtements de sol" class="form-check-input" type="checkbox" value="" id="defaultCheck7" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck7">
                       revêtements de sol
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="carrelage" class="form-check-input" type="checkbox" value="" id="defaultCheck8" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck8">
                       carrelage
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="parquet" class="form-check-input" type="checkbox" value="" id="defaultCheck9" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck9">
                       parquet
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="peinture" class="form-check-input" type="checkbox" value="" id="defaultCheck10" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck10">
                       peinture
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="décoration" class="form-check-input" type="checkbox" value="" id="defaultCheck11" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck11">
                       décoration
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="électricité" class="form-check-input" type="checkbox" value="" id="defaultCheck12" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck12">
                       électricité
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="Crepi" class="form-check-input" type="checkbox" value="" id="defaultCheck13" (click)="clickProjets($event)">
+                    <label class="form-check-label" for="defaultCheck13">
                       Crepi
                     </label>
                   </div>
@@ -156,7 +159,7 @@
                   <div class="form-group required">
                     <label for="input-enquiry" class="control-label">Message</label>
                     <div class="">
-                      <textarea class="form-control" id="input-enquiry"  rows="3" name="enquiry"></textarea>
+                      <textarea class="form-control" id="input-enquiry"  rows="3" name="enquiry" [(ngModel)]="request.message"></textarea>
                     </div>
                   </div>
         
@@ -168,7 +171,11 @@
                 <div class="buttons">
                   <br>
                   <div style="text-align: center;">
-                    <input type="submit" value="Envoyer" class="btn btn-primary">
+                    <input *ngIf="!isLoading" type="submit" value="Envoyer" class="btn btn-primary" (click)="controleInput()">
+                    <button *ngIf="isLoading" class="btn btn-primary" type="button" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Chargement...
+                    </button>
                   </div>
                 </div>
               </div>

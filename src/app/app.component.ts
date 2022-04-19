@@ -22,6 +22,13 @@ export class AppComponent implements OnInit, AfterViewInit{
     
     this.router.events.subscribe((event: Event) => {
 
+      let top = document.getElementById('pagebody');
+      if (top !== null) {
+        top.scrollIntoView();
+        top = null;
+      }
+
+
     //  this.initFacebookService();
 
       if (event instanceof NavigationEnd) {
@@ -30,9 +37,10 @@ export class AppComponent implements OnInit, AfterViewInit{
             localStorage.setItem("routePath", event.url);
             //location.reload();
                
-              window.scroll(0,0);
-              //document.body.scrollTop = 0;
+              //window.scroll(0,0);
+             // document.body.scrollTop = 0;
               
+         
              
           }
 

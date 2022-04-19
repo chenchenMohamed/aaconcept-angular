@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -25,6 +29,10 @@ import { EnduitdecoratifComponent } from './services/enduitdecoratif/enduitdecor
 import { NettoyagetoitureComponent } from './services/nettoyagetoiture/nettoyagetoiture.component';
 import { RenovationfacadeComponent } from './services/renovationfacade/renovationfacade.component';
 import { RenovationinterieurComponent } from './services/renovationinterieur/renovationinterieur.component';
+import { Demandedevis1Component } from './demandedevis/demandedevis1/demandedevis1.component';
+import { Demandedevis2Component } from './demandedevis/demandedevis2/demandedevis2.component';
+import { Demandedevis3Component } from './demandedevis/demandedevis3/demandedevis3.component';
+import { Demandedevis4Component } from './demandedevis/demandedevis4/demandedevis4.component';
 
 @NgModule({
   declarations: [
@@ -50,11 +58,17 @@ import { RenovationinterieurComponent } from './services/renovationinterieur/ren
     EnduitdecoratifComponent,
     NettoyagetoitureComponent,
     RenovationfacadeComponent,
-    RenovationinterieurComponent
+    RenovationinterieurComponent,
+    Demandedevis1Component,
+    Demandedevis2Component,
+    Demandedevis3Component,
+    Demandedevis4Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

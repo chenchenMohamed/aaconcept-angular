@@ -184,6 +184,7 @@ h4{
 .icon-list2 div:hover{
     background-color: rgb(116, 117, 20);
 }
+
 .icon-list2 div:hover img{
     transform: scale(1.2);
 }

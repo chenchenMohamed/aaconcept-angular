@@ -57,6 +57,10 @@ strong{
     font-size: 20px;
 }
 
+.erreur{
+    border: red solid 1px;
+}
+
 img{
     height: 150px;
 }

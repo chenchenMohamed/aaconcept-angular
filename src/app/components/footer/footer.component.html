@@ -7,7 +7,7 @@
             
             <h2>Contactez-nous</h2>
             <p>Un projet&nbsp;? Une question&nbsp;?</p>
-            <a href="/contact" class="footer-button">Contact</a><br><br>
+            <a [routerLink]="['/Contact']" class="footer-button">Contact</a><br><br>
   
           </div>
           <div class="col-lg-3 stats_info counter_grid class2-footer">
@@ -39,12 +39,12 @@
               <p>Enter your email and receive the latest news from us.</p>
             </div>
             <div class="column1">
-              <form action="#" class="subscribe" method="post">
+              <div action="#" class="subscribe" method="post">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="color: white; border: white 2px solid;"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                  <input type="text" class="form-control" placeholder="Entrer votre email" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="request.email">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="controleInput()" style="color: white; border: white 2px solid;"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
 

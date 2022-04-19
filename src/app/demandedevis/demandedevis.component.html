@@ -14,248 +14,57 @@
       
       <div class="row style-ligne">
 
-        <div class="col-3 icon-top">
+        <div class="col-4 icon-top">
           <span> <i class="fas fa-home"></i> </span>
           <div style="background-color: green;"></div>
-          <p>1 - Le type de vos travaux</p>
+          <p *ngIf="request.typeTravaux == ''">1 - Le type de vos travaux</p>
+          <p *ngIf="request.typeTravaux != ''">1 - {{request.typeTravaux}}</p>
+        
         </div>
 
-        <div class="col-3 icon-top">
+      <!--  <div class="col-3 icon-top">
           <span><i class="fas fa-box-open"></i></span>
-          <div style="background-color: green;"></div>
-          <p>2 - La nature de vos travaux</p>
-        </div>
+          <div></div>
+       
+          <div *ngIf="slideIndex > 1" style="background-color: green;"></div>
+          <p  *ngIf="request.natureTravaux == ''">2 - La nature de vos travaux</p>
+          <p  *ngIf="request.natureTravaux != ''">2 - {{request.natureTravaux}}</p>
+    
+        </div>-->
 
-        <div class="col-3 icon-top">
+        <div class="col-4 icon-top">
           <span><i class="fas fa-clipboard-check"></i></span>
-          <div style="background-color: green;"></div>
+          <div></div>
+       
+          <div *ngIf="slideIndex > 2" style="background-color: green;"></div>
           <p>3 - Votre projet</p>
         </div>
 
-        <div class="col-3 icon-top">
+        <div class="col-4 icon-top" id="slider">
           <span><i class="far fa-comment-dots"></i></span>
           <div></div>
+          <div *ngIf="slideIndex > 3" style="background-color: green;"></div>
+         
           <span style="float:right;"><i class="far fa-handshake"></i></span>
           <p>4 - Vos coordonnées</p>
         </div>
 
         <!-- debut slider -->
-        <div class="slider-formulaire col-12">
+        <div class="slider-formulaire col-12" >
           <div class="block1">
-            <div class="content">
-              <h4> 1- Sélectionnez le type de travaux que vous souhaitez réaliser</h4>
-
-              <br>
-
-              <div style="width: 100%;">
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-construction-renovation_hover.png">
-                    <p>Construction Renovation</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-energies-renouvelables_hover.png">
-                    <p>Energies Renouvelables</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-exterieur-jardins_hover.png">
-                    <p>Exterieur Jardins</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-interieurs_hover.png">
-                    <p>Renovation Interieurs</p>
-                  </div>
-                </div>
-
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-isolation_hover.png">
-                    <p>Renovation Isolation</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-maconnerie_hover.png">
-                    <p>Renovation Maconnerie</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-menuiseries_hover.png">
-                    <p>Renovation Menuiseries</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-plomberie-chauffage_hover.png">
-                    <p>Plomberie Chauffage</p>
-                  </div>
-                </div>
-
-              </div>
-
-              <br> <br>
-
-              <button type="button" class="btn btn-primary" (click)="showDivs(2)">Suivant</button>
-
-            </div>
+             <app-demandedevis1 (showDivsEvent)="showDivs($event)" (setTypeTravaux2)="setTypeTravaux($event)"></app-demandedevis1>
           </div>
 
+         <!-- <div class="block1">
+            <app-demandedevis2 (showDivsEvent)="showDivs($event)" (setNatureTravaux)="setNatureTravaux($event)" ></app-demandedevis2>
+          </div>-->
 
           <div class="block1">
-            <div class="col-12">
-              <h4> 2- Sélectionnez la nature de travaux que vous souhaitez réaliser</h4>
-
-              <br>
-
-              <div style="width: 100%;">
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-construction-renovation_hover.png">
-                    <p>Construction Renovation</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-energies-renouvelables_hover.png">
-                    <p>Energies Renouvelables</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-exterieur-jardins_hover.png">
-                    <p>Exterieur Jardins</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-interieurs_hover.png">
-                    <p>Renovation Interieurs</p>
-                  </div>
-                </div>
-
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-isolation_hover.png">
-                    <p>Renovation Isolation</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-maconnerie_hover.png">
-                    <p>Renovation Maconnerie</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-menuiseries_hover.png">
-                    <p>Renovation Menuiseries</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 icon-list2">
-                  <div>
-                    <img src="./assets/images/icons/picto_univ-plomberie-chauffage_hover.png">
-                    <p>Plomberie Chauffage</p>
-                  </div>
-                </div>
-
-              </div>
-
-              <br> <br>
-
-              <button type="button" class="btn btn-primary" style="margin-right: 10px;"
-                (click)="showDivs(1)">Précédent</button>
-
-              <button type="button" class="btn btn-primary" (click)="showDivs(3)">Suivant</button>
-
-            </div>
-          </div>
-
-
-          <div class="block1">
-            <div class="col-12">
-              <h4> 3- Décrivez-nous votre projet</h4>
-
-              <div class="form-group" style="width: 100%;">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-              <br>
-
-              <button type="button" class="btn btn-primary" style="margin-right: 10px;"
-                (click)="showDivs(2)">Précédent</button>
-              <button type="button" class="btn btn-primary" (click)="showDivs(4)">Suivant</button>
-            </div>
+            <app-demandedevis3 (showDivsEvent)="showDivs($event)" (setProjet)="setProjet($event)" ></app-demandedevis3>
           </div>
 
           <div class="block1">
-            <div class="col-12">
-              <h4> 4- Compléter vos coordonnées</h4>
-
-              <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
-              </div>
-
-              <br>
-
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">
-                  J'accepte les Conditions Générales d'Utilisation et la Charte sur la protection des données
-                  personnelles
-                </label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">
-                  J'accepte de recevoir des communications par voie électronique sur des offres de produits ou services
-                  d'Habitatpresto
-                </label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">
-                  J'accepte de recevoir des communications par voie électronique sur des offres de produits ou services
-                  de Partenaires </label>
-              </div>
-
-              <br><br>
-
-              <button type="button" class="btn btn-primary" style="margin-right: 10px;"
-                (click)="showDivs(3)">Précédent</button>
-              <button type="button" class="btn btn-primary">Demande Devis</button>
-
-            </div>
+            <app-demandedevis4 [isLoading]="isLoading" (showDivsEvent)="showDivs($event)" (setCoordonnees)="setCoordonnees($event)"></app-demandedevis4>
           </div>
 
         </div>
